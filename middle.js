@@ -30,7 +30,8 @@ function eqArrays (array1, array2) {
   //array with odd number = single middle element returned
   //array with even number = two middle elements returned
 const middle = function(numbers) {
-  if (numbers.length <= 2) return [];
+  if (numbers.length <= 2) 
+  return [];
   let index = Math.floor(numbers.length / 2);
   if (numbers.length % 2 == 0) {
     return [numbers[index - 1], numbers[index]]; 

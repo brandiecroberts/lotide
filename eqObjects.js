@@ -19,10 +19,12 @@ const eqObjects = function(object1, object2) {
     if (!object1.hasOwnProperty(x)) continue;
     if (!object2.hasOwnProperty(x)) continue;
     if (object1[x] === object2[x]) continue;
-    if (typeof object1[x] !== 'object') return false;
-    if (!object_equals(object1[x], object2[x])) return false;
+    if (typeof object1[x] !== 'object')
+    return false;
+    if (!object_equals(object1[x], object2[x]))
+    return false;
   }
-  for (x in object2) {
+  for (let x in object2) {
     if (object2.hasOwnProperty(x) && !object1.hasOwnProperty(x)) return false;
     return true;
   }
